@@ -1,0 +1,17 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_file",
+      "input": {
+        "path": "src/auth/login.rs",
+        "summary": true
+      }
+    }
+  ],
+  "text": [],
+  "usage": {
+    "input_tokens": 3030,
+    "output_tokens": 79
+  }
+}

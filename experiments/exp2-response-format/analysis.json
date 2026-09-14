@@ -1,0 +1,110 @@
+{
+  "experiment": "exp2-response-format",
+  "primary_test": {
+    "claude-haiku-4-5-20251001": {
+      "metric": "param_fill_score",
+      "U": 880.0,
+      "p": 0.33518613265889785,
+      "r": -0.10000000000000009,
+      "r_ci95_percentile": [
+        -0.30000000000000004,
+        0.09999999999999998
+      ],
+      "n_b": 40,
+      "n_a": 40,
+      "mean_b": 0.75,
+      "mean_a": 0.65
+    },
+    "claude-sonnet-5": {
+      "metric": "param_fill_score",
+      "U": 740.0,
+      "p": 0.24210483026285845,
+      "r": 0.07499999999999996,
+      "r_ci95_percentile": [
+        -0.050000000000000044,
+        0.19999999999999996
+      ],
+      "n_b": 40,
+      "n_a": 40,
+      "mean_b": 0.875,
+      "mean_a": 0.95
+    }
+  },
+  "token_cost_test": {
+    "claude-haiku-4-5-20251001": {
+      "metric": "input_tokens",
+      "U": 0.0,
+      "p": 1.1722760667092168E-14,
+      "r": 1.0,
+      "r_ci95_percentile": [
+        1.0,
+        1.0
+      ],
+      "n_b": 40,
+      "n_a": 40,
+      "mean_b": 2339.625,
+      "mean_a": 2419.625
+    },
+    "claude-sonnet-5": {
+      "metric": "input_tokens",
+      "U": 0.0,
+      "p": 1.1722760667092168E-14,
+      "r": 1.0,
+      "r_ci95_percentile": [
+        1.0,
+        1.0
+      ],
+      "n_b": 40,
+      "n_a": 40,
+      "mean_b": 2899.75,
+      "mean_a": 3029.75
+    }
+  },
+  "exploratory": {
+    "b": {
+      "claude-sonnet-5": {
+        "n": 40,
+        "mean_param_fill_score": 0.875,
+        "tool_selection_accuracy": 0.925,
+        "mean_input_tokens": 2899.75
+      },
+      "claude-haiku-4-5-20251001": {
+        "n": 40,
+        "mean_param_fill_score": 0.75,
+        "tool_selection_accuracy": 0.875,
+        "mean_input_tokens": 2339.625
+      }
+    },
+    "a": {
+      "claude-sonnet-5": {
+        "n": 40,
+        "mean_param_fill_score": 0.95,
+        "tool_selection_accuracy": 1.0,
+        "mean_input_tokens": 3029.75
+      },
+      "claude-haiku-4-5-20251001": {
+        "n": 40,
+        "mean_param_fill_score": 0.65,
+        "tool_selection_accuracy": 0.875,
+        "mean_input_tokens": 2419.625
+      }
+    }
+  },
+  "sensitivity": {
+    "note": "post-hoc, not pre-registered: drop the S4 follow_depth_absent trap check entirely (both arms)",
+    "primary_test": {
+      "claude-haiku-4-5-20251001": {
+        "mean_b": 0.875,
+        "mean_a": 0.75,
+        "p": 0.1567,
+        "r": -0.125
+      },
+      "claude-sonnet-5": {
+        "mean_b": 0.9,
+        "mean_a": 1.0,
+        "p": 0.0427,
+        "r": 0.1
+      }
+    }
+  }
+}

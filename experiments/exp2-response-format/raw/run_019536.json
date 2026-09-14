@@ -1,0 +1,21 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_file",
+      "input": {
+        "path": "src/utils/math.rs",
+        "response_format": {
+          "fields": [
+            "functions"
+          ]
+        }
+      }
+    }
+  ],
+  "text": [],
+  "usage": {
+    "input_tokens": 2894,
+    "output_tokens": 91
+  }
+}

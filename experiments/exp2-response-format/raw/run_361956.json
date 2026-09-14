@@ -1,0 +1,19 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_directory",
+      "input": {
+        "path": ".",
+        "max_depth": 2
+      }
+    }
+  ],
+  "text": [
+    "I need to know the path to the Rust crate before I can run the impl-only analysis. Let me check the workspace structure first."
+  ],
+  "usage": {
+    "input_tokens": 2909,
+    "output_tokens": 166
+  }
+}

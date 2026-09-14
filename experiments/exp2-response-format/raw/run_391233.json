@@ -1,0 +1,22 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_symbol",
+      "input": {
+        "path": "src",
+        "symbol": "API_KEY",
+        "mode": "def_use",
+        "follow_depth": 0,
+        "max_depth": 0
+      }
+    }
+  ],
+  "text": [
+    "I'll analyze the `API_KEY` constant to find all write and read sites in the src/ directory."
+  ],
+  "usage": {
+    "input_tokens": 2420,
+    "output_tokens": 153
+  }
+}

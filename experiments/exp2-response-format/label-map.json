@@ -1,0 +1,965 @@
+{
+  "assignments": {
+    "run_579442": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 4
+    },
+    "run_826829": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 5
+    },
+    "run_893794": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 5
+    },
+    "run_765197": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 1
+    },
+    "run_227853": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 5
+    },
+    "run_495115": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 3
+    },
+    "run_744878": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 2
+    },
+    "run_004769": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 5
+    },
+    "run_089040": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 5
+    },
+    "run_564666": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 4
+    },
+    "run_969199": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 4
+    },
+    "run_317483": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 3
+    },
+    "run_431864": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 3
+    },
+    "run_524983": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 1
+    },
+    "run_972807": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 1
+    },
+    "run_213035": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 3
+    },
+    "run_938710": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 4
+    },
+    "run_146835": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 3
+    },
+    "run_708453": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 5
+    },
+    "run_361956": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 2
+    },
+    "run_554486": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 3
+    },
+    "run_983609": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 5
+    },
+    "run_123320": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 2
+    },
+    "run_240361": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 1
+    },
+    "run_119757": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 1
+    },
+    "run_019536": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 3
+    },
+    "run_504301": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 4
+    },
+    "run_828590": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 3
+    },
+    "run_140154": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 5
+    },
+    "run_154170": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 4
+    },
+    "run_524849": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 2
+    },
+    "run_388819": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 2
+    },
+    "run_892612": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 1
+    },
+    "run_977171": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 3
+    },
+    "run_944800": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 5
+    },
+    "run_627339": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 3
+    },
+    "run_517892": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 5
+    },
+    "run_199429": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 2
+    },
+    "run_669888": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 5
+    },
+    "run_554334": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 4
+    },
+    "run_218701": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 3
+    },
+    "run_941607": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 3
+    },
+    "run_911436": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 3
+    },
+    "run_542413": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 5
+    },
+    "run_974035": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 4
+    },
+    "run_937237": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 3
+    },
+    "run_025878": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 2
+    },
+    "run_836833": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 1
+    },
+    "run_884423": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 1
+    },
+    "run_873919": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 4
+    },
+    "run_192310": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 4
+    },
+    "run_670500": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 3
+    },
+    "run_404428": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 4
+    },
+    "run_945665": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 2
+    },
+    "run_244088": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 5
+    },
+    "run_144833": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 4
+    },
+    "run_046033": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 4
+    },
+    "run_148370": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 2
+    },
+    "run_078175": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 3
+    },
+    "run_778418": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 2
+    },
+    "run_594587": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 5
+    },
+    "run_908492": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 2
+    },
+    "run_845486": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 4
+    },
+    "run_232328": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 3
+    },
+    "run_706839": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 5
+    },
+    "run_031756": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 4
+    },
+    "run_727418": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 5
+    },
+    "run_880820": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 1
+    },
+    "run_095793": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 4
+    },
+    "run_700752": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 4
+    },
+    "run_045554": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 3
+    },
+    "run_600180": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 1
+    },
+    "run_898040": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 2
+    },
+    "run_237442": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 1
+    },
+    "run_735689": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 2
+    },
+    "run_703439": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 1
+    },
+    "run_682531": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 4
+    },
+    "run_208398": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 4
+    },
+    "run_207815": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 1
+    },
+    "run_358276": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 4
+    },
+    "run_203803": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 1
+    },
+    "run_020176": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 4
+    },
+    "run_971562": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 1
+    },
+    "run_084674": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 5
+    },
+    "run_697766": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 2
+    },
+    "run_028462": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 2
+    },
+    "run_900666": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 5
+    },
+    "run_948424": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 4
+    },
+    "run_464534": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 5
+    },
+    "run_168563": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 3
+    },
+    "run_074098": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 1
+    },
+    "run_446092": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 2
+    },
+    "run_233381": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 5
+    },
+    "run_966302": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 1
+    },
+    "run_095470": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 1
+    },
+    "run_843050": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 2
+    },
+    "run_352135": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 1
+    },
+    "run_730529": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 3
+    },
+    "run_243101": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 2
+    },
+    "run_947805": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 1
+    },
+    "run_300010": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 2
+    },
+    "run_705730": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 2
+    },
+    "run_563198": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 5
+    },
+    "run_585110": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 4
+    },
+    "run_096560": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 5
+    },
+    "run_356592": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 2
+    },
+    "run_969528": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 3
+    },
+    "run_945218": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 3
+    },
+    "run_029953": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 2
+    },
+    "run_592029": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 1
+    },
+    "run_699469": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 3
+    },
+    "run_036653": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 1
+    },
+    "run_165432": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 4
+    },
+    "run_317318": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 4
+    },
+    "run_974347": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 1
+    },
+    "run_391233": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 1
+    },
+    "run_883908": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 3
+    },
+    "run_050408": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 3
+    },
+    "run_713877": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 1
+    },
+    "run_690294": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 2
+    },
+    "run_177266": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 2
+    },
+    "run_629289": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 1
+    },
+    "run_951546": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 1
+    },
+    "run_557756": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 3
+    },
+    "run_736507": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 1
+    },
+    "run_572713": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 5
+    },
+    "run_175001": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 2
+    },
+    "run_968309": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 5
+    },
+    "run_656281": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 2
+    },
+    "run_106985": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 4
+    },
+    "run_841277": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 5
+    },
+    "run_839722": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 5
+    },
+    "run_277288": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 4
+    },
+    "run_217227": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S3",
+      "run_index": 2
+    },
+    "run_674835": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S3",
+      "run_index": 5
+    },
+    "run_808271": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F1",
+      "run_index": 3
+    },
+    "run_788099": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S1",
+      "run_index": 1
+    },
+    "run_926654": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 1
+    },
+    "run_355892": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 3
+    },
+    "run_741801": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F1",
+      "run_index": 5
+    },
+    "run_472843": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 2
+    },
+    "run_481012": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 4
+    },
+    "run_507252": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F3",
+      "run_index": 3
+    },
+    "run_188857": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 3
+    },
+    "run_344576": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 2
+    },
+    "run_122270": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F4",
+      "run_index": 4
+    },
+    "run_661050": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 5
+    },
+    "run_944015": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 1
+    },
+    "run_585459": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 2
+    },
+    "run_869651": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S4",
+      "run_index": 4
+    },
+    "run_344581": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 3
+    },
+    "run_814752": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S4",
+      "run_index": 3
+    },
+    "run_054805": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "S2",
+      "run_index": 5
+    },
+    "run_366998": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S2",
+      "run_index": 5
+    },
+    "run_067145": {
+      "cell": "b",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "S1",
+      "run_index": 5
+    },
+    "run_670973": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F4",
+      "run_index": 2
+    },
+    "run_671392": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 2
+    },
+    "run_568582": {
+      "cell": "a",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F3",
+      "run_index": 4
+    },
+    "run_907800": {
+      "cell": "b",
+      "model": "claude-sonnet-5",
+      "prompt_id": "F2",
+      "run_index": 4
+    },
+    "run_928662": {
+      "cell": "a",
+      "model": "claude-haiku-4-5-20251001",
+      "prompt_id": "F2",
+      "run_index": 1
+    }
+  },
+  "sealed_at": "2026-09-14T21:10:40.417738+00:00"
+}

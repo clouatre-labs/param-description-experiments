@@ -1,0 +1,19 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_file",
+      "input": {
+        "path": "src/models/user.rs",
+        "response_format": "full"
+      }
+    }
+  ],
+  "text": [
+    "I'll analyze the user.rs file for you with a complete breakdown."
+  ],
+  "usage": {
+    "input_tokens": 2337,
+    "output_tokens": 94
+  }
+}
