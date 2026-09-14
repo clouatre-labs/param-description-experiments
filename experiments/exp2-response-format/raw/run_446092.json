@@ -1,0 +1,16 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_file",
+      "input": {
+        "path": "src/models/user.rs"
+      }
+    }
+  ],
+  "text": [],
+  "usage": {
+    "input_tokens": 3029,
+    "output_tokens": 56
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "stop_reason": "end_turn",
+  "tool_uses": [],
+  "text": [
+    "I need to analyze the `write` method callers in your Rust crate. However, I need to know the directory path where your Rust crate is located. Could you please provide the path to your Rust crate directory?"
+  ],
+  "usage": {
+    "input_tokens": 2428,
+    "output_tokens": 53
+  }
+}

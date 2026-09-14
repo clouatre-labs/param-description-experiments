@@ -147,6 +147,35 @@ documented by OpenRouter is a ceiling, not an estimate; for this run's size
 (cell, model) pair (8 calls) synchronously to `raw/pilot/`, outside the sealed run, as a
 cheap sanity check of the full grid before committing to `--confirm-full-run`.
 
+## Experiment 2: response-format collapse (exp2-response-format)
+
+A/B experiment deciding whether `analyze_file`/`analyze_symbol`'s response-shaping
+parameters (`summary`, `fields`, `mode`, `impl_only`) should collapse into a single
+payload-carrying `response_format` enum. Design spec: aptu-coder
+`docs/audit/2026-09-14-response-format-experiment-design.md` (PR #1553); protocol,
+rubric, prompts, and fixtures in `experiments/exp2-response-format/`.
+
+- 2 arms (a = baseline 4-param surface from real schemars serialization; b = collapsed
+  `response_format` enum) x 2 models x 8 tool-bound prompts x 5 runs = 160 calls
+  (40 per cell per model).
+- The harness now derives cells from the fixture files present and supports per-cell
+  multi-tool fixtures ("tools" dict + "distractors" list) so each arm presents an
+  arm-consistent tools array; exp1's 4-cell single-tool layout is unchanged.
+- Scoring (`recipe/scorer.py`) is arm-blind over the union surface: intent expressed on
+  exactly one surface is correct; cross-surface leakage, pre-registered absences
+  violations, and wrong values are scored per the four-way categorical, un-pooled.
+- Analysis (`recipe/analyze.py`): for two-cell experiments it runs MWU (b vs a) per
+  model on `param_fill_score` (primary) and `input_tokens` (token-cost gate), with
+  rank-biserial r and bootstrap 95% CIs.
+
+```sh
+uv run recipe/harness.py --experiment experiments/exp2-response-format --dry-run
+uv run recipe/harness.py --experiment experiments/exp2-response-format --pilot
+uv run recipe/harness.py --experiment experiments/exp2-response-format --confirm-full-run
+uv run recipe/scorer.py --experiment experiments/exp2-response-format
+uv run recipe/analyze.py --experiment experiments/exp2-response-format
+```
+
 ## License
 
 Apache-2.0.

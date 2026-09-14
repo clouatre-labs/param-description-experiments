@@ -1,0 +1,19 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_symbol",
+      "input": {
+        "path": "src/",
+        "symbol": "parse_config",
+        "follow_depth": 1,
+        "max_depth": null
+      }
+    }
+  ],
+  "text": [],
+  "usage": {
+    "input_tokens": 3013,
+    "output_tokens": 151
+  }
+}

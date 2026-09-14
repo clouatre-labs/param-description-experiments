@@ -1,0 +1,19 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_directory",
+      "input": {
+        "path": ".",
+        "max_depth": 2
+      }
+    }
+  ],
+  "text": [
+    "I'll help you find the callers of the `write` method from 'impl Trait for Type' blocks. First, let me identify the Rust crate structure."
+  ],
+  "usage": {
+    "input_tokens": 2348,
+    "output_tokens": 109
+  }
+}

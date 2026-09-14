@@ -1,0 +1,22 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_symbol",
+      "input": {
+        "path": "src",
+        "symbol": "std::collections",
+        "response_format": "import_lookup",
+        "follow_depth": 0,
+        "max_depth": 3
+      }
+    }
+  ],
+  "text": [
+    "I'll search for files that import `std::collections` in the src/ directory."
+  ],
+  "usage": {
+    "input_tokens": 2337,
+    "output_tokens": 150
+  }
+}

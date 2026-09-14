@@ -1,0 +1,19 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_file",
+      "input": {
+        "path": "src/handlers/routes.rs",
+        "cursor": "eyJwIjoxfQ"
+      }
+    }
+  ],
+  "text": [
+    "I'll continue analyzing the file from where you left off."
+  ],
+  "usage": {
+    "input_tokens": 2433,
+    "output_tokens": 96
+  }
+}

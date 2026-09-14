@@ -1,0 +1,20 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_symbol",
+      "input": {
+        "path": "src/",
+        "symbol": "std::collections",
+        "response_format": "import_lookup",
+        "follow_depth": 1,
+        "max_depth": null
+      }
+    }
+  ],
+  "text": [],
+  "usage": {
+    "input_tokens": 2893,
+    "output_tokens": 154
+  }
+}

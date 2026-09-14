@@ -1,0 +1,29 @@
+{
+  "stop_reason": "tool_use",
+  "tool_uses": [
+    {
+      "name": "analyze_directory",
+      "input": {
+        "path": ".",
+        "max_depth": 2
+      }
+    },
+    {
+      "name": "analyze_symbol",
+      "input": {
+        "path": ".",
+        "symbol": "write",
+        "follow_depth": 1,
+        "max_depth": null,
+        "response_format": "impl_only"
+      }
+    }
+  ],
+  "text": [
+    "I'll analyze the crate directory first to confirm its structure, then query the `write` symbol restricted to `impl Trait for Type` callers."
+  ],
+  "usage": {
+    "input_tokens": 2909,
+    "output_tokens": 369
+  }
+}

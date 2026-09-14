@@ -1,0 +1,2042 @@
+[
+  {
+    "run_id": "run_004769",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "incorrect"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_019536",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2894,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_020176",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "correct",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2909,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_025878",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_028462",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "correct",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3023,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_029953",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "incorrect"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_031756",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2428,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_036653",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3051,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_045554",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_046033",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3051,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_050408",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_054805",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2909,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_067145",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2328,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_074098",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "incorrect"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_078175",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2900,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_084674",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3051,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_089040",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_095470",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2900,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_095793",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2348,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_096560",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2421,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_106985",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2340,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_119757",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2328,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_122270",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2433,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_123320",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2428,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_140154",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "correct",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3039,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_144833",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2883,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_146835",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2921,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_148370",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2894,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_154170",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2408,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_165432",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2893,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_168563",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2341,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_175001",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3030,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_177266",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "correct",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3039,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_188857",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2408,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_192310",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2341,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_199429",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3013,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_203803",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_207815",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3013,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_208398",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_213035",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "incorrect"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_217227",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_218701",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2340,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_227853",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2413,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_232328",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2433,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_233381",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_237442",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2428,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_240361",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_243101",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2340,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_244088",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2894,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_277288",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_300010",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_317318",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3024,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_317483",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_344576",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2348,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_344581",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2333,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_352135",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_355892",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_356592",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2900,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_358276",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2333,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_361956",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2909,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_366998",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2348,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_388819",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "correct",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2893,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_391233",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2420,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_404428",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_431864",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2421,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_446092",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_464534",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2433,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_472843",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "correct",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_481012",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2921,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_495115",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_504301",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3023,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_507252",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_517892",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3024,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_524849",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_524983",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2341,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_542413",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3030,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_554334",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2421,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_554486",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2420,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_557756",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "correct",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2893,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_563198",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_564666",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2328,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_568582",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_572713",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_579442",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2900,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_585110",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3030,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_585459",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2921,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_592029",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "correct",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3039,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_594587",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2333,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_600180",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2894,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_627339",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2348,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_629289",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2333,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_656281",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_661050",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "correct",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2893,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_669888",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "incorrect"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_670500",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3051,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_670973",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3051,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_671392",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2413,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_674835",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2340,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_682531",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "correct",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3039,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_690294",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2353,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_697766",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2883,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_699469",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "correct",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2909,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_700752",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3013,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_703439",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2421,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_705730",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2328,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_706839",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2353,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_708453",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3013,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_713877",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3030,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_727418",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2408,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_730529",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2883,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_735689",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3024,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_736507",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2909,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_741801",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2341,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_744878",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2341,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_765197",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2433,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_778418",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2421,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_788099",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2883,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_808271",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3030,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_814752",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3023,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_826829",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2420,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_828590",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2428,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_836833",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "correct",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3023,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_839722",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2883,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_841277",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2921,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_843050",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2433,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_845486",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_869651",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_873919",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2420,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_880820",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2921,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_883908",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2328,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_884423",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_892612",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2348,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_893794",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "correct",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3023,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_898040",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2408,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_900666",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_907800",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2894,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_908492",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2333,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_911436",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2413,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_926654",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3024,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_928662",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2413,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_937237",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3013,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_938710",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2413,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_941607",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_944015",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "correct",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2893,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_944800",
+    "prompt_id": "F1",
+    "category": "summary_intent",
+    "checks": {
+      "summary": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2900,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_945218",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2353,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_945665",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2420,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_947805",
+    "prompt_id": "S1",
+    "category": "call_graph_default",
+    "checks": {
+      "call_graph": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2408,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_948424",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2353,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_951546",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2337,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_966302",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_968309",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "omitted",
+      "mode_not_lookup_or_defuse": "omitted"
+    },
+    "tool_selection_correct": false,
+    "input_tokens": 2428,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_969199",
+    "prompt_id": "S4",
+    "category": "import_lookup_mode",
+    "checks": {
+      "import_lookup": "correct",
+      "match_mode_absent": "correct",
+      "follow_depth_absent": "incorrect",
+      "impl_only_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_969528",
+    "prompt_id": "F2",
+    "category": "fields_projection",
+    "checks": {
+      "fields": "correct",
+      "summary_not_set": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3024,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_971562",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3029,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_972807",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2340,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_974035",
+    "prompt_id": "F3",
+    "category": "full_default",
+    "checks": {
+      "full_output": "incorrect"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2417,
+    "param_fill_score": 0,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_974347",
+    "prompt_id": "F4",
+    "category": "cursor_pagination",
+    "checks": {
+      "cursor": "correct",
+      "summary_absent": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2353,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_977171",
+    "prompt_id": "S2",
+    "category": "impl_only_mode",
+    "checks": {
+      "impl_only": "correct",
+      "mode_not_lookup_or_defuse": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 3039,
+    "param_fill_score": 1,
+    "caveat_present": null
+  },
+  {
+    "run_id": "run_983609",
+    "prompt_id": "S3",
+    "category": "def_use_mode",
+    "checks": {
+      "def_use": "correct"
+    },
+    "tool_selection_correct": true,
+    "input_tokens": 2899,
+    "param_fill_score": 1,
+    "caveat_present": null
+  }
+]
