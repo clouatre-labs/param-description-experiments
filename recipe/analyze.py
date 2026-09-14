@@ -150,16 +150,81 @@ def main() -> None:
     joined = join_scores(scores, assignments)
     groups = group_by_cell_model(joined)
 
-    analysis = {
-        "primary_test": primary_test(groups),
-        "exploratory": exploratory(groups),
-        "secondary_accuracy_test": check_level_test(groups),
-        "token_cost_test": token_cost_test(groups),
-    }
+    cells = {cell for cell, _ in groups}
+    if cells == {"a", "b"}:
+        # exp2 two-arm layout: a = baseline surface, b = collapsed response_format
+        # enum. Primary test: MWU per model, b vs a, on param_fill_score; secondary:
+        # same on input_tokens (token-cost regression gate). Effect size is the
+        # rank-biserial r with a bootstrap 95% percentile CI (10k resamples, fixed
+        # seed for reproducibility).
+        analysis = {
+            "experiment": "exp2-response-format",
+            "primary_test": two_arm_tests(groups, "param_fill_score"),
+            "token_cost_test": two_arm_tests(groups, "input_tokens"),
+            "exploratory": exploratory(groups),
+        }
+    else:
+        analysis = {
+            "primary_test": primary_test(groups),
+            "exploratory": exploratory(groups),
+            "secondary_accuracy_test": check_level_test(groups),
+            "token_cost_test": token_cost_test(groups),
+        }
 
     out_path = exp_dir / "analysis.json"
     out_path.write_text(json.dumps(analysis, indent=2) + "\n")
     print(f"wrote analysis to {out_path}")
+
+
+def two_arm_tests(
+    groups: dict[tuple[str, str], list[dict]], metric: str
+) -> dict[str, dict]:
+    """Per model: Mann-Whitney U (collapsed b vs baseline a, two-sided) on metric.
+
+    Reports U, p, rank-biserial effect size r, and a bootstrap 95% percentile CI
+    for r (10,000 resamples, fixed seed).
+    """
+    import random
+
+    models = sorted({model for _, model in groups})
+    rng = random.Random(20260914)
+    tests: dict[str, dict] = {}
+    for model in models:
+        b_values = [r[metric] for r in groups.get(("b", model), [])]
+        a_values = [r[metric] for r in groups.get(("a", model), [])]
+        n1, n2 = len(b_values), len(a_values)
+        mwu = mannwhitneyu(b_values, a_values, alternative="two-sided")
+        # scipy's bundled type stubs don't expose MannwhitneyuResult's named fields.
+        u = float(mwu.statistic)  # pyright: ignore[reportAttributeAccessIssue]
+        pvalue = float(mwu.pvalue)  # pyright: ignore[reportAttributeAccessIssue]
+        r = 1 - (2 * u) / (n1 * n2) if n1 and n2 else None
+
+        def _r_of(u_sample: float) -> float:
+            return 1 - (2 * u_sample) / (n1 * n2)
+
+        boot: list[float] = []
+        if n1 and n2:
+            for _ in range(10_000):
+                bs = [rng.choice(b_values) for _ in range(n1)]
+                as_ = [rng.choice(a_values) for _ in range(n2)]
+                ub = float(mannwhitneyu(bs, as_, alternative="two-sided").statistic)  # pyright: ignore[reportAttributeAccessIssue]
+                boot.append(_r_of(ub))
+            boot.sort()
+            ci = [boot[int(0.025 * len(boot))], boot[int(0.975 * len(boot)) - 1]]
+        else:
+            ci = None
+        tests[model] = {
+            "metric": metric,
+            "U": u,
+            "p": pvalue,
+            "r": r,
+            "r_ci95_percentile": ci,
+            "n_b": n1,
+            "n_a": n2,
+            "mean_b": sum(b_values) / n1 if n1 else None,
+            "mean_a": sum(a_values) / n2 if n2 else None,
+        }
+    return tests
 
 
 if __name__ == "__main__":

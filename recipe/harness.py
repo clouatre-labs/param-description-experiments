@@ -27,7 +27,6 @@ from pathlib import Path
 from time import sleep
 
 MODELS = ["claude-haiku-4-5-20251001", "claude-sonnet-5"]
-CELLS = ["a", "b", "c", "d"]
 RUNS_PER_CELL_MODEL_PROMPT = 5
 MAX_TOKENS = 1024
 
@@ -52,33 +51,69 @@ class Call:
     run_index: int
     tools: list[dict]
     prompt_text: str
+    target_tool: str = ""
 
 
 def load_experiment(exp_dir: Path) -> tuple[dict[str, dict], list[dict], list[dict]]:
+    """Load fixtures and prompts.
+
+    Cells are derived from the fixture files present (exp1: a-d; exp2: a-b), so the
+    grid adapts per experiment without editing this module. A cell fixture has either
+    a single "tool" (exp1 style) or a "tools" dict keyed by tool name plus per-cell
+    "distractors" (exp2 multi-tool style, where the arm must vary distractor schemas
+    too). Top-level distractors.json is the exp1 fallback and is shared across cells.
+    """
     fixtures_dir = exp_dir / "fixtures"
+    cell_ids = sorted(
+        p.stem.removeprefix("cell-")
+        for p in fixtures_dir.glob("cell-*.json")
+    )
     cells = {
-        c: json.loads((fixtures_dir / f"cell-{c}.json").read_text()) for c in CELLS
+        c: json.loads((fixtures_dir / f"cell-{c}.json").read_text())
+        for c in cell_ids
     }
-    distractors = json.loads((fixtures_dir / "distractors.json").read_text())["tools"]
+    distractors_path = fixtures_dir / "distractors.json"
+    distractors = (
+        json.loads(distractors_path.read_text())["tools"]
+        if distractors_path.exists()
+        else []
+    )
     prompts = json.loads((exp_dir / "prompts.json").read_text())["prompts"]
     return cells, distractors, prompts
 
 
-def build_tools(cell: dict, distractors: list[dict]) -> list[dict]:
-    primary = {
-        "name": cell["tool"]["name"],
-        "description": cell["tool"]["description"],
-        "input_schema": cell["tool"]["input_schema"],
-    }
-    others = [
+def build_tools(cell: dict, distractors: list[dict], target_tool: str) -> list[dict]:
+    """Assemble the tools array for one call.
+
+    exp1 cells carry a single "tool"; target_tool is then informational. exp2 cells
+    carry a "tools" dict; the prompt's target_tool picks the primary variant and the
+    cell's own distractors (minus the target itself) fill out the array.
+    """
+    if "tools" in cell:
+        primary = cell["tools"][target_tool]
+        others = []
+        for t in cell["distractors"]:
+            if t["name"] == target_tool:
+                continue
+            # Distractor entries may alias a cell tool's schema to avoid duplicating
+            # large JSON blobs in the fixture ("SAME_AS tools.<name>").
+            schema = t["input_schema"]
+            if isinstance(schema, str) and schema.startswith("SAME_AS tools."):
+                schema = cell["tools"][schema.removeprefix("SAME_AS tools.")][
+                    "input_schema"
+                ]
+            others.append({**t, "input_schema": schema})
+    else:
+        primary = cell["tool"]
+        others = distractors
+    return [
         {
             "name": t["name"],
             "description": t["description"],
             "input_schema": t["input_schema"],
         }
-        for t in distractors
+        for t in [primary, *others]
     ]
-    return [primary, *others]
 
 
 def gen_run_id(existing: set[str]) -> str:
@@ -94,10 +129,15 @@ def plan_calls(
 ) -> list[Call]:
     calls: list[Call] = []
     seen_ids: set[str] = set()
-    for cell_id in CELLS:
-        tools = build_tools(cells[cell_id], distractors)
+    for cell_id in cells:
         for model in MODELS:
             for prompt in prompts:
+                target_tool = prompt.get("target_tool") or (
+                    next(iter(cells[cell_id]["tools"]))
+                    if "tools" in cells[cell_id]
+                    else cells[cell_id]["tool"]["name"]
+                )
+                tools = build_tools(cells[cell_id], distractors, target_tool)
                 for run_index in range(1, RUNS_PER_CELL_MODEL_PROMPT + 1):
                     calls.append(
                         Call(
@@ -108,6 +148,7 @@ def plan_calls(
                             run_index=run_index,
                             tools=tools,
                             prompt_text=prompt["text"],
+                            target_tool=target_tool,
                         )
                     )
     random.shuffle(calls)  # execution order decorrelated from generation order
@@ -298,7 +339,7 @@ def main() -> None:
     cells, distractors, prompts = load_experiment(exp_dir)
     calls = plan_calls(cells, distractors, prompts)
     print(
-        f"Planned {len(calls)} calls across {len(CELLS)} cells x {len(MODELS)} models x "
+        f"Planned {len(calls)} calls across {len(cells)} cells x {len(MODELS)} models x "
         f"{len(prompts)} prompts x {RUNS_PER_CELL_MODEL_PROMPT} runs."
     )
 

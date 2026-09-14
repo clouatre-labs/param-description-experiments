@@ -1,0 +1,122 @@
+{
+  "_cell": "B",
+  "_label": "collapsed: response_format payload-carrying enum replaces summary/fields (file) and mode/impl_only (symbol)",
+  "_source": "Baseline schemas (cell-a) with the response-shaping parameters removed and replaced by a single response_format property per the mapping table in docs/audit/2026-09-14-response-format-experiment-design.md (aptu-coder #1553). Lookup semantics (match_mode, follow_depth, max_depth, cursor, git_ref) stay top-level. Full preserves tri-state auto-summarize (summary=None >50K) semantics; omitted response_format == Full.",
+  "tools": {
+    "analyze_file": {
+      "name": "analyze_file",
+      "description": "Functions, types, classes, and imports from a single source file. Fails if directory path supplied; use analyze_directory instead. Paginates with cursor/page_size; use response_format {\"fields\": [...]} to limit sections. git_ref not supported. Use analyze_module for a lightweight function/import index (~75% smaller). Supported: Astro, C/C++, C#, CSS, Fortran, Go, HTML, Java, JavaScript, JSON, Kotlin, Markdown, Python, Rust, TOML, TSX, TypeScript, YAML.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "File path to analyze",
+            "pattern": "(?i)\\.(rs|py|go|ts|tsx|js|mjs|cjs|java|kt|kts|cs|cpp|cc|cxx|c|h|hpp|hxx|f|f77|f90|f95|f03|f08|for|ftn|html|htm|md|mdx|astro|css|yaml|yml|json|toml)$"
+          },
+          "response_format": {
+            "description": "Response shape (default: full; omit for full). full: complete file analysis; when the rendered output would exceed 50K chars it is auto-summarized to a compact overview unless every section is explicitly required. summary: compact summary only (totals plus section counts, no per-item listings). fields: object payload projecting the output to the listed sections (\"functions\", \"classes\", \"imports\", \"all\"); the FILE header is always emitted regardless.",
+            "anyOf": [
+              {"type": "string", "enum": ["full", "summary"]},
+              {
+                "type": "object",
+                "properties": {
+                  "fields": {
+                    "type": "array",
+                    "items": {"type": "string", "enum": ["functions", "classes", "imports", "all"]}
+                  }
+                },
+                "required": ["fields"]
+              }
+            ]
+          },
+          "cursor": {
+            "type": ["string", "null"],
+            "description": "Pagination cursor from a previous response's `next_cursor` field. Pass unchanged to retrieve the next page. Omit on the first call.\nMust be a valid opaque token or omitted entirely; passing an empty string is invalid and is treated as omitted.\nMutually exclusive with response_format=summary; passing both returns INVALID_PARAMS."
+          }
+        },
+        "required": ["path"]
+      }
+    },
+    "analyze_symbol": {
+      "name": "analyze_symbol",
+      "description": "Call graph for a named symbol across all files in a directory. Prefer over analyze_file when the question is \"who calls X\" or \"what does X call\" rather than \"what is in this file\". Response shapes: full (default call graph), summary, def_use (write/read sites), impl_only (callers from 'impl Trait for Type' blocks only). Fails if file path supplied; fails if response_format=summary and cursor. match_mode controls name matching; git_ref restricts to changed files.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Directory path to search for the symbol"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "Symbol name to build call graph for (function or method). Example: `parse_config` finds all callers and callees of that function."
+          },
+          "match_mode": {
+            "description": "Symbol matching mode (default: exact). exact: case-sensitive exact match. insensitive: case-insensitive exact match. prefix: case-insensitive prefix match. contains: case-insensitive substring match.",
+            "anyOf": [
+              {"type": "string", "enum": ["exact", "insensitive", "prefix", "contains"]},
+              {"type": "null"}
+            ]
+          },
+          "follow_depth": {
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "maximum": 3,
+            "description": "Call graph traversal depth for this tool (default 1). Level 1 = direct callers and callees; level 2 = one more hop, etc. Output size grows exponentially with graph branching. Warn user on levels above 2. Hard cap of 3."
+          },
+          "max_depth": {
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "description": "Maximum directory traversal depth. Unset means unlimited. Use 2-3 for large monorepos."
+          },
+          "cursor": {
+            "type": ["string", "null"],
+            "description": "Pagination cursor from a previous response's `next_cursor` field. Pass unchanged to retrieve the next page. Omit on the first call.\nMust be a valid opaque token or omitted entirely; passing an empty string is invalid and is treated as omitted.\nMutually exclusive with response_format=summary; passing both returns INVALID_PARAMS."
+          },
+          "response_format": {
+            "description": "Analysis mode and response shape (default: full; omit for full). full: build a call graph for the symbol with complete output; when the rendered output would exceed 50K chars it is auto-summarized. summary: compact summary output. def_use: extract write/read sites for the symbol instead of a call graph (symbol must be non-empty). impl_only: restrict callers to only those from 'impl Trait for Type' blocks (Rust only; returns INVALID_PARAMS for non-Rust directories). import_lookup: find all files in the directory that import the module path given in symbol (e.g., std::collections); requires symbol to be non-empty and rejects match_mode/follow_depth/impl_only.",
+            "type": "string",
+            "enum": ["full", "summary", "def_use", "impl_only", "import_lookup"]
+          },
+          "git_ref": {
+            "type": ["string", "null"],
+            "default": null,
+            "description": "Restrict analysis to files changed relative to this git ref (branch, tag, or commit SHA). Empty string or unset means no filtering."
+          }
+        },
+        "required": ["path", "symbol", "follow_depth", "max_depth"]
+      }
+    }
+  },
+  "distractors": [
+    {
+      "name": "analyze_directory",
+      "description": "Tree-view of directory with LOC, function/class counts, test markers. Respects .gitignore. Paginates with next_cursor. Default max_depth=3. Large dirs (1000+ files) auto-compact to summary; pass summary=false for per-file list. git_ref restricts to files changed since a branch/tag/commit. Empty directories return zero counts.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string", "description": "Directory path to analyze"},
+          "max_depth": {"type": ["integer", "null"], "minimum": 0, "description": "Maximum directory traversal depth for overview mode only. Default: 3. Pass 0 for unlimited depth. Use 1-3 for large monorepos to manage output size. Ignored in other modes."},
+          "git_ref": {"type": "string", "description": "Restrict analysis to files changed relative to this git ref (branch, tag, or commit SHA). Empty string or unset means no filtering."},
+          "cursor": {"type": "string", "description": "Pagination cursor from a previous response's next_cursor field. Pass unchanged to retrieve the next page. Omit on the first call."},
+          "page_size": {"type": ["integer", "null"], "description": "Files per page for pagination (default: 100). Reduce below 100 to limit response size; increase above 100 to reduce round trips."},
+          "summary": {"type": ["boolean", "null"], "description": "true = compact summary (totals plus directory tree, no per-file function lists); false = full output; unset = auto-summarize when output exceeds 50K chars. Mutually exclusive with cursor; passing both returns INVALID_PARAMS."}
+        },
+        "required": ["path"]
+      }
+    },
+    {
+      "_distractor_for": "analyze_file prompts",
+      "name": "analyze_symbol",
+      "description": "Call graph for a named symbol across all files in a directory. Prefer over analyze_file when the question is \"who calls X\" or \"what does X call\" rather than \"what is in this file\". Response shapes: full (default call graph), summary, def_use (write/read sites), impl_only (callers from 'impl Trait for Type' blocks only). Fails if file path supplied; fails if response_format=summary and cursor. match_mode controls name matching; git_ref restricts to changed files.",
+      "input_schema": "SAME_AS tools.analyze_symbol"
+    },
+    {
+      "_distractor_for": "analyze_symbol prompts",
+      "name": "analyze_file",
+      "description": "Functions, types, classes, and imports from a single source file. Fails if directory path supplied; use analyze_directory instead. Paginates with cursor/page_size; use response_format {\"fields\": [...]} to limit sections. git_ref not supported. Use analyze_module for a lightweight function/import index (~75% smaller). Supported: Astro, C/C++, C#, CSS, Fortran, Go, HTML, Java, JavaScript, JSON, Kotlin, Markdown, Python, Rust, TOML, TSX, TypeScript, YAML.",
+      "input_schema": "SAME_AS tools.analyze_file"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "_note": "8 frozen prompts + pre-registered expected-JSON rubric for exp2-response-format. Ground truth is cell-invariant: cells differ only in which response-shaping surface the model can see (baseline summary/fields/mode/impl_only vs collapsed response_format enum), not in what 'correct' means. Every prompt binds to one target tool; the scorer uses target_tool for tool_selection and category dispatch. Correct calls express intent on exactly one surface; setting both surfaces simultaneously is scored incorrect (cross-surface leakage). Pre-registered ABSENCES: import_lookup forbids match_mode/follow_depth/impl_only on both arms; summary is incompatible with cursor on both arms.",
+  "distractor_note": "Distractors are per-cell (cell-a: baseline variants; cell-b: collapsed variants) so every cell sees a coherent arm-consistent tools array; analyze_directory is arm-invariant.",
+  "prompts": [
+    {
+      "id": "F1",
+      "target_tool": "analyze_file",
+      "category": "summary_intent",
+      "text": "Give me a quick overview of src/auth/login.rs -- I don't need every function listed, just the shape of the file.",
+      "expected": {
+        "arm_a": {"summary": true},
+        "arm_b": {"response_format": "summary"}
+      },
+      "incorrect_if": {
+        "arm_a": {"summary": [false, null], "fields": "any_set"},
+        "arm_b": {"response_format": ["full", "fields_payload"]}
+      }
+    },
+    {
+      "id": "F2",
+      "target_tool": "analyze_file",
+      "category": "fields_projection",
+      "text": "From src/utils/math.rs I only want the function definitions -- skip classes and imports entirely.",
+      "expected": {
+        "arm_a": {"fields": ["functions"]},
+        "arm_b": {"response_format": {"fields": ["functions"]}}
+      },
+      "incorrect_if": {
+        "arm_a": {"fields": [["classes"], ["imports"], ["all"], ["functions", "classes"]], "summary": true},
+        "arm_b": {"response_format": ["full", "summary", "fields_payload_other_sections"]}
+      },
+      "notes": "Trap: setting summary=true alongside fields is scored incorrect because summary silently drops fields (locked by aptu-coder analyze_file_fields_summary.rs integration test)."
+    },
+    {
+      "id": "F3",
+      "target_tool": "analyze_file",
+      "category": "full_default",
+      "text": "Analyze src/models/user.rs and show me the complete file analysis -- functions, classes, imports, everything.",
+      "expected": {
+        "arm_a": {"summary": [null, false], "fields": null},
+        "arm_b": {"response_format": [null, "full"]}
+      },
+      "incorrect_if": {
+        "arm_a": {"summary": true, "fields": "any_set"},
+        "arm_b": {"response_format": ["summary", "fields_payload", "def_use", "impl_only"]}
+      },
+      "notes": "Full is the default on both arms; leaving response_format unset in arm b is correct and preserves tri-state auto-summarize semantics."
+    },
+    {
+      "id": "F4",
+      "target_tool": "analyze_file",
+      "category": "cursor_pagination",
+      "text": "Resume analyzing src/handlers/routes.rs from where my last call left off -- here is the cursor from the previous response: eyJwIjoxfQ. I want the complete output.",
+      "expected": {
+        "arm_a": {"cursor": "eyJwIjoxfQ", "summary": null},
+        "arm_b": {"cursor": "eyJwIjoxfQ", "response_format": [null, "full"]}
+      },
+      "incorrect_if": {
+        "arm_a": {"cursor": null, "summary": [true, false]},
+        "arm_b": {"cursor": null, "response_format": ["summary"]}
+      },
+      "notes": "Pre-registered absence: summary is mutually exclusive with cursor on both arms (response_format=summary is the collapsed equivalent), so a correct call never sets either alongside the cursor."
+    },
+    {
+      "id": "S1",
+      "target_tool": "analyze_symbol",
+      "category": "call_graph_default",
+      "text": "Who calls `parse_config` in src/, and what does it call?",
+      "expected": {
+        "arm_a": {"mode": [null, "call_graph"], "match_mode": [null, "exact"], "follow_depth": [null, 1], "impl_only": null},
+        "arm_b": {"response_format": [null, "full"], "match_mode": [null, "exact"], "follow_depth": [null, 1]}
+      },
+      "incorrect_if": {
+        "arm_a": {"mode": ["import_lookup", "def_use"], "impl_only": "any_non_default", "follow_depth": "value_other_than_1_or_unset"},
+        "arm_b": {"response_format": ["summary", "def_use", "impl_only"], "follow_depth": "value_other_than_1_or_unset"}
+      }
+    },
+    {
+      "id": "S2",
+      "target_tool": "analyze_symbol",
+      "category": "impl_only_mode",
+      "text": "Show me the callers of the `write` method, but only the ones coming from 'impl Trait for Type' blocks -- this is a Rust crate.",
+      "expected": {
+        "arm_a": {"impl_only": true},
+        "arm_b": {"response_format": "impl_only"}
+      },
+      "incorrect_if": {
+        "arm_a": {"impl_only": [false, null], "mode": ["import_lookup", "def_use"]},
+        "arm_b": {"response_format": ["full", "summary", "def_use", "fields_payload"]}
+      }
+    },
+    {
+      "id": "S3",
+      "target_tool": "analyze_symbol",
+      "category": "def_use_mode",
+      "text": "Find every place the `API_KEY` constant is written or read under src/ -- I need the write sites and the read sites.",
+      "expected": {
+        "arm_a": {"mode": "def_use"},
+        "arm_b": {"response_format": "def_use"}
+      },
+      "incorrect_if": {
+        "arm_a": {"mode": [null, "call_graph", "import_lookup"]},
+        "arm_b": {"response_format": ["full", "summary", "impl_only", "fields_payload"]}
+      }
+    },
+    {
+      "id": "S4",
+      "target_tool": "analyze_symbol",
+      "category": "import_lookup_mode",
+      "text": "Which files in src/ import `std::collections`? Don't build a call graph, just list the importers.",
+      "expected": {
+        "arm_a": {"mode": "import_lookup", "match_mode": null, "follow_depth": null, "impl_only": null},
+        "arm_b": {"response_format": "import_lookup", "match_mode": null, "follow_depth": null, "impl_only": null}
+      },
+      "incorrect_if": {
+        "arm_a": {"mode": [null, "call_graph", "def_use"], "match_mode": "any_non_default", "follow_depth": "any_non_default", "impl_only": "any_non_default"},
+        "arm_b": {"response_format": ["full", "summary", "def_use", "impl_only", "fields_payload"], "match_mode": "any_non_default", "follow_depth": "any_non_default", "impl_only": "any_non_default"}
+      },
+      "notes": "Pre-registered ABSENCES on both arms: import_lookup rejects match_mode/follow_depth/impl_only (server-side mutual exclusion, post-#1543 mode enum); setting any of them is scored incorrect even though the server would only warn."
+    }
+  ]
+}
