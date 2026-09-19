@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this dataset, please cite the dataset itself."
 type: dataset
-title: "MCP Parameter-Description Ablation: Null-Result Experiment Dataset"
+title: "MCP Parameter-Description Ablation: Token Savings Without Accuracy Loss"
 authors:
   - family-names: Clouâtre
     given-names: Hugues
@@ -11,17 +11,15 @@ license: Apache-2.0
 date-released: "2026-09-19"
 version: "1.0.0"
 abstract: >
-  Supplementary dataset for a pre-registered ablation experiment testing whether moving
-  parameter-level detail out of an MCP tool's description string and into
-  inputSchema.properties[*].description regresses parameter-filling accuracy, especially
-  for smaller models. Contains two experiments: exp1-analyze-symbol, a 320-call run across
-  two models in a 2x2 cell design, blind-scored at two scoring resolutions, with no
-  significant parameter-filling difference (Mann-Whitney U, n=40/cell) but a significant
-  input-token reduction for the lean description; and exp2-response-format, a collapse A/B
-  of response-shaping parameters into a single response_format enum, also null on
-  parameter-filling with a small significant token saving. Includes fixtures, prompts,
-  rubrics, raw call transcripts, blind scores, and pre-registered protocols locked before
-  scoring.
+  Supplementary dataset for a pre-registered, blind-scored ablation study testing
+  whether moving parameter-level detail out of an MCP tool's description string and
+  into inputSchema.properties[*].description costs parameter-filling accuracy. Across
+  two experiments (320 and 160 calls; claude-haiku-4-5 and claude-sonnet-5), the
+  pre-registered Mann-Whitney U primary tests found no detectable accuracy difference
+  at two scoring resolutions, while input tokens per call dropped significantly for
+  the schema-level placement — demonstrating a roughly 45% tool-description token
+  saving at no measurable accuracy cost. Includes pre-registered protocols, rubrics,
+  raw call transcripts, blind scores, and all harness, scorer, and analysis scripts.
 keywords:
   - model-context-protocol
   - mcp
@@ -29,9 +27,9 @@ keywords:
   - tool-use
   - function-calling
   - ablation-study
-  - null-result
-  - pre-registered
-  - mann-whitney-u
+  - token-efficiency
   - prompt-engineering
   - input-schema
+  - schema-design
+  - cost-reduction
   - agentic-ai
