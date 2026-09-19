@@ -1,12 +1,12 @@
 {
-  "title": "MCP Parameter-Description Ablation: Null-Result Experiment Dataset",
+  "title": "MCP Parameter-Description Ablation: Token Savings Without Accuracy Loss",
   "upload_type": "dataset",
   "access_right": "open",
   "license": "apache-2.0",
   "language": "eng",
   "version": "1.0.0",
   "publication_date": "2026-09-19",
-  "description": "Supplementary dataset for a pre-registered ablation experiment testing whether moving parameter-level detail out of an MCP tool's description string and into inputSchema.properties[*].description regresses parameter-filling accuracy, especially for smaller models. Contains two experiments: (1) exp1-analyze-symbol, a 320-call run across two models (claude-haiku-4-5, claude-sonnet-5) in a 2x2 cell design (rich vs. lean tool description; param detail in tool description vs. input schema), blind-scored at two scoring resolutions; the pre-registered Mann-Whitney U primary test found no significant parameter-filling difference for either model (haiku U=720, p=0.372; sonnet U=820, p=0.569, n=40/cell), while input tokens per call dropped significantly for the lean description (p<0.001 both models, ~45% tool-description token reduction); (2) exp2-response-format, a collapse A/B of response-shaping parameters into a single response_format enum (2 arms x 2 tools x 2 models), also null on parameter-filling (haiku p=0.335, sonnet p=0.242, n=40/cell) with a significant but small token saving. Includes fixtures, prompts, rubrics, scorer prompts, raw call transcripts, blind scores, and pre-registered protocols locked before scoring.",
+  "description": "Supplementary dataset for a pre-registered ablation experiment testing whether moving parameter-level detail out of an MCP tool's description string and into inputSchema.properties[*].description regresses parameter-filling accuracy, especially for smaller models. Both experiments were blind-scored: raw transcripts were scored with model identity and cell assignment masked, and all primary tests were pre-registered before data collection.",
   "creators": [
     {
       "name": "Clouâtre, Hugues",
@@ -21,11 +21,11 @@
     "tool-use",
     "function-calling",
     "ablation-study",
-    "null-result",
-    "pre-registered",
-    "mann-whitney-u",
+    "token-efficiency",
     "prompt-engineering",
     "input-schema",
+    "schema-design",
+    "cost-reduction",
     "agentic-ai"
   ],
   "related_identifiers": [
@@ -40,5 +40,5 @@
       "resource_type": "software"
     }
   ],
-  "notes": "Both experiments were blind-scored: raw transcripts were scored with the model identity and cell assignment masked. Primary tests were pre-registered before data collection; sensitivity and exploratory analyses are labeled as such in the analysis files."
+  "notes": "Accuracy tests found no detectable difference (a negative result on the regression question); the study's contribution is demonstrating a significant, consistent token-cost reduction at no measurable accuracy cost. Sensitivity and exploratory analyses are labeled as such in the analysis files."
 }
