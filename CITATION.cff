@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite the dataset itself."
+type: dataset
+title: "MCP Parameter-Description Ablation: Null-Result Experiment Dataset"
+authors:
+  - family-names: Clouâtre
+    given-names: Hugues
+    orcid: "https://orcid.org/0009-0002-4291-1999"
+repository-code: "https://github.com/clouatre-labs/param-description-experiments"
+license: Apache-2.0
+date-released: "2026-09-19"
+version: "1.0.0"
+abstract: >
+  Supplementary dataset for a pre-registered ablation experiment testing whether moving
+  parameter-level detail out of an MCP tool's description string and into
+  inputSchema.properties[*].description regresses parameter-filling accuracy, especially
+  for smaller models. Contains two experiments: exp1-analyze-symbol, a 320-call run across
+  two models in a 2x2 cell design, blind-scored at two scoring resolutions, with no
+  significant parameter-filling difference (Mann-Whitney U, n=40/cell) but a significant
+  input-token reduction for the lean description; and exp2-response-format, a collapse A/B
+  of response-shaping parameters into a single response_format enum, also null on
+  parameter-filling with a small significant token saving. Includes fixtures, prompts,
+  rubrics, raw call transcripts, blind scores, and pre-registered protocols locked before
+  scoring.
+keywords:
+  - model-context-protocol
+  - mcp
+  - llm-evaluation
+  - tool-use
+  - function-calling
+  - ablation-study
+  - null-result
+  - pre-registered
+  - mann-whitney-u
+  - prompt-engineering
+  - input-schema
+  - agentic-ai
