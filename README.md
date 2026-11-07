@@ -10,7 +10,7 @@ Does moving parameter-level detail out of an MCP tool's description string and i
 smaller models?
 
 Supplementary data repository for an MCP parameter-description ablation experiment. Companion
-blog post: TBD.
+blog post: [How Much Tool Documentation Do AI Agents Actually Need?](https://clouatre.ca/posts/mcp-tool-docs/).
 
 </div>
 
