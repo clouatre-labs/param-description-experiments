@@ -176,6 +176,10 @@ uv run recipe/scorer.py --experiment experiments/exp2-response-format
 uv run recipe/analyze.py --experiment experiments/exp2-response-format
 ```
 
+## Citation
+
+If you cite this work, use [CITATION.cff](CITATION.cff): it is the single source of truth for citation metadata (title, authors, version, DOI, blog write-up) and GitHub renders it under "Cite this repository".
+
 ## License
 
 Apache-2.0.
